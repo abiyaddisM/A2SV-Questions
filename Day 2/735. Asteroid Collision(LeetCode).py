@@ -1,4 +1,7 @@
 
+#January 28 2025
+#https://leetcode.com/problems/asteroid-collision/
+
 class Solution:
     def asteroidCollision(self, ast: List[int]) -> List[int]:
         res = []
