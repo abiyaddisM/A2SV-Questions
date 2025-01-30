@@ -1,6 +1,6 @@
 
 #January 29 2025
-#https://leetcode.com/problems/isomorphic-strings/
+#https://leetcode.com/problems/isomorpthic-strings/
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         dic = {}
