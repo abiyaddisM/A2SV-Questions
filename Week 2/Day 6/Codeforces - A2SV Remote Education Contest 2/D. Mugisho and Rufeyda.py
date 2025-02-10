@@ -1,5 +1,4 @@
 n, t = map(int,input().split())
-
 if t == 10:
     if n == 1:
         print(-1)
