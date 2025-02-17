@@ -11,4 +11,4 @@ class Solution:
             else:
                 res += costs[i][1]
 
-        return  res
+        return res
