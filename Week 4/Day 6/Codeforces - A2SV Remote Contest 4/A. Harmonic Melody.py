@@ -11,7 +11,15 @@ def STR():
 def PA(arr):
     print(' '.join(map(str, arr)))
 
+n = INT()
+for _ in range(n):
+    size = INT()
+    arr = IA()
 
-st = 'd'
-st = reversed(st)
-print(st)
+    for i in range(size - 1):
+        val =  abs(arr[i] - arr[i + 1])
+        if val != 7 and val != 5:
+            print('NO')
+            break
+    else:
+        print('YES')

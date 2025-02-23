@@ -11,7 +11,12 @@ def STR():
 def PA(arr):
     print(' '.join(map(str, arr)))
 
-
-st = 'd'
-st = reversed(st)
-print(st)
+t = INT()
+for _ in range(t):
+    n, m = IA()
+    arr = []
+    for __ in range(n):
+        arr.append(IA())
+    count = 0
+    for i in range(n):
+        for j in range()
