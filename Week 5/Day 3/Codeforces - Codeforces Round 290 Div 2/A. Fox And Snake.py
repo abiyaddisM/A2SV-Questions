@@ -11,3 +11,16 @@ def STR():
 def PA(arr):
     print(' '.join(map(str, arr)))
 
+n, m = IA()
+flag = True
+for i in range(n):
+        if i % 2 == 0:
+            print('#' * m)
+            continue
+
+        if flag:
+            print('.' * (m - 1) + '#')
+        else:
+            print('#' + '.' * (m - 1))
+
+        flag = not flag
