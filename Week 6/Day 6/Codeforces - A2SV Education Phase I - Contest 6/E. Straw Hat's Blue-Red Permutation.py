@@ -19,6 +19,7 @@ for _ in range(t):
     red = [0 for i in range(size)]
     blue = [0 for i in range(size)]
     state = True
+
     for i in range(size):
         if color[i] == 'R':
             if num[i] > size:
@@ -32,6 +33,7 @@ for _ in range(t):
                 break
             v = min(num[i], size)
             blue[v - 1] += 1
+            
     for i in range(1,size):
         blue[i] += blue[i - 1]
         red[-(i + 1)] += red[-i]
