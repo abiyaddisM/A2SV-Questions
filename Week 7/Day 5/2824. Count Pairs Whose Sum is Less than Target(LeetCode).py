@@ -11,5 +11,4 @@ class Solution:
                 r -= 1
             res += r - l
             l += 1
-
         return res
