@@ -21,12 +21,9 @@ for _ in range(t):
     state = True
     for i in range(1, len(arr)):
         temp = m - arr[i]
-        if arr[i - 1] > arr[i] and arr[i - 1] > temp:
-            state = False
-            break
         if arr[i - 1] <= temp <= arr[i]:
             arr[i] = temp
-    if state:
+    if sorted(arr):
         print('YES')
     else:
         print('NO')
