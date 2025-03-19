@@ -11,3 +11,4 @@ def STR():
 def PA(arr):
     print(' '.join(map(str, arr)))
 
+arr = 'help'
