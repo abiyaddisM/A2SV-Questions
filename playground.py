@@ -10,5 +10,10 @@ def STR():
     return input()
 def PA(arr):
     print(' '.join(map(str, arr)))
+def YesNo(state):
+    if state:
+        print('YES')
+    else:
+        print('NO')
 
 
