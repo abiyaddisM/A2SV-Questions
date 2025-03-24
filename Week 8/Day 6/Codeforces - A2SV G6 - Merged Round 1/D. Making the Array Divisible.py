@@ -42,7 +42,7 @@ for _ in range(t):
         for t in temp:
             if t == 0 or t not in dic:
                 continue
-            val = k -  t
+            val = k - t
             if res >= val:
                 count += 1
                 res = 0
