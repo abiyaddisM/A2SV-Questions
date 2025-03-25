@@ -22,9 +22,11 @@ for _ in range(t):
     size, k = IA()
     nums = IA()
     ext = []
+
     for n in nums:
         ext.append(n - (n // k) * k)
     dic = Counter(ext)
+
     ms = set()
     temp = []
     for e in ext:
@@ -38,6 +40,7 @@ for _ in range(t):
     res = 0
     if 0 in dic:
         dic.pop(0)
+
     while len(dic) > 0:
         for t in temp:
             if t == 0 or t not in dic:
@@ -46,9 +49,11 @@ for _ in range(t):
             if res >= val:
                 count += 1
                 res = 0
+
             res = val
             dic[t] -= 1
             if dic[t] == 0:
                 dic.pop(t)
+
     res = res + count * k
     print(res + 1 if res > 0 else 0)
