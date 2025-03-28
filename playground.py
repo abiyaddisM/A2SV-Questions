@@ -17,3 +17,4 @@ def YesNo(state):
         print('NO')
 
 
+print(-1 % 2)
