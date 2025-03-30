@@ -17,3 +17,12 @@ def YesNo(state):
         print('NO')
 
 
+t = INT()
+for _ in range(t):
+    size = INT()
+    nums = IA()
+    nums.sort()
+    res = abs(nums[0] - nums[1])
+    for i in range(size - 1):
+        res = min(res, abs(nums[i] - nums[i + 1]))
+    print(res)
