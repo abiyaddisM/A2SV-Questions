@@ -4,7 +4,6 @@ import heapq
 class Solution:
     def smallestRange(self, nums: List[List[int]]) -> List[int]:
         res = []
-        temp = [0 for _ in range(len(nums))]
         heap = []
         maxs = float('-inf')
         for i in range(len(nums)):
