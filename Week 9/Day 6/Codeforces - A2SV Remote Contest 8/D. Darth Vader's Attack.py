@@ -22,14 +22,20 @@ for _ in range(t):
     size = INT()
     nums = IA()
     arr = STR()
+    pre = nums[:]
+    for i in range(1,size):
+        pre[i] += pre[i - 1]
     l = 0
     r = size - 1
+    res = 0
     while l < r:
         if arr[l] == 'L' and arr[r] == 'R':
-            break
-        l += 1
-        r -= 1
-    res = 0
-    for i in range(l,r + 1):
-        res += nums[i]
+            res += pre[r] - (pre[l - 1] if l > 0 else 0)
+            l += 1
+            r -= 1
+        if arr[l] != 'L':
+            l += 1
+        if arr[r] != 'R':
+            r -= 1
+
     print(res)
