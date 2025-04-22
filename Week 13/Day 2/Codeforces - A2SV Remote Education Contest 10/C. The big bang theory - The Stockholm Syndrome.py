@@ -16,7 +16,11 @@ def YesNo(state):
     else:
         print('NO')
 
-
-t = INT()
-for _ in range(t):
-    
+size = INT()
+nums = IA()
+nums.sort()
+count = 1
+for n in nums:
+    if n >= count:
+        count += 1
+print(count)

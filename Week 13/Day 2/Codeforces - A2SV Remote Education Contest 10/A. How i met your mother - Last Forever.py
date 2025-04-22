@@ -17,6 +17,13 @@ def YesNo(state):
         print('NO')
 
 
-t = INT()
-for _ in range(t):
-    
+size = INT()
+word = STR()
+n = 0
+z = 0
+for w in word:
+    if w == 'n':
+        n += 1
+    if w == 'z':
+        z += 1
+print('1 ' * n + '0 ' * z)
