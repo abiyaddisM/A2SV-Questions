@@ -19,4 +19,4 @@ def YesNo(state):
 
 t = INT()
 for _ in range(t):
-    
+    nums = IA()
