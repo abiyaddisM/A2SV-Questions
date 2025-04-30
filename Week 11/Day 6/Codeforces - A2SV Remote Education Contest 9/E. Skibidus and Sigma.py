@@ -28,7 +28,9 @@ for _ in range(t):
     for i in range(n):
         for j in range(1, m):
             nums[i][j] += nums[i][j - 1]
-    middle = math.ceil(m / 2) if m > 1 else 0
+
+    #middle = math.ceil(m / 2) if m > 1 else 0
+
     nums.sort(key = lambda x : x[-1], reverse = True)
     total = 0
     for i in range(n):
