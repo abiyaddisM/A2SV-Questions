@@ -10,7 +10,7 @@ class Solution:
         l = 0
         for r in range(len(s)):
             if s[r] in dic:
-                total += dic[s[r]]
+                total += dic[s[r]]\
             else:
                 total += ord(s[r]) - 96
             if total < 0:
