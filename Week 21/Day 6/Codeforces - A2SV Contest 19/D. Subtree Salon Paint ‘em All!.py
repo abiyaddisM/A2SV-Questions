@@ -20,13 +20,11 @@ def YesNo(state):
 size = INT()
 tempGraph = IA()
 color = IA()
-graph = defaultdict(list)
 res2 = 1
 for i in range(1, size):
     j = tempGraph[i - 1] - 1
     if color[j] != color[i]:
-        res2 += 1
+        res += 1
 print(res2)
-res = [0]
 
 
