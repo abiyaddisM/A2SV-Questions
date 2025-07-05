@@ -1,13 +1,17 @@
-from collections import Counter,deque
+from collections import Counter,deque, defaultdict
 import math
+import sys
+
 def INT():
-    return int(input())
+    return int(sys.stdin.readline())
+
 def IA():
-    return list(map(int,input().strip().split()))
+    return list(map(int, sys.stdin.readline().split()))
 def SA():
     return input().split()
 def STR():
-    return input()
+    return sys.stdin.readline()
+
 def PA(arr):
     print(' '.join(map(str, arr)))
 def YesNo(state):
