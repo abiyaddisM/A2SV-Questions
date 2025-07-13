@@ -5,7 +5,6 @@ import sys
 
 def INT():
     return int(sys.stdin.readline())
-
 def IA():
     return list(map(int, sys.stdin.readline().split()))
 def SA():
@@ -20,7 +19,21 @@ def YesNo(state):
     else:
         print('NO')
 
+size = INT()
+nums = IA()
 
-t = INT()
-for _ in range(t):
-    nums = IA()
+res = []
+
+for i in range(size):
+    visited = set()
+    next = i
+    while True:
+        if next in visited:
+            res.append(next + 1)
+            break
+        visited.add(next)
+        next = nums[next] - 1
+
+
+
+PA(res)

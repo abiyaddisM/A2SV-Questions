@@ -20,7 +20,12 @@ def YesNo(state):
     else:
         print('NO')
 
-
-t = INT()
-for _ in range(t):
-    nums = IA()
+size = INT()
+heap = []
+dic = {'rat':1, 'woman':2, 'child':2,'man':3 ,'captain':4,}
+for i in range(size):
+    name, pos = input().split()
+    heapq.heappush(heap, (dic[pos], i, name))
+while heap:
+    _, _, name = heapq.heappop(heap)
+    print(name)

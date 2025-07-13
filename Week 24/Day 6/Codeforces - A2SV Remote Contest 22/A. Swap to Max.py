@@ -23,4 +23,11 @@ def YesNo(state):
 
 t = INT()
 for _ in range(t):
-    nums = IA()
+    size = INT()
+    a = IA()
+    b = IA()
+    for i in range(size):
+        if a[i] > b[i]:
+            a[i],b[i] = b[i], a[i]
+    print(max(a) * max(b))
+
