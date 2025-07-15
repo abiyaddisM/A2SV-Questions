@@ -31,6 +31,7 @@ for _ in range(size):
         res.append(f'insert {val}')
     elif temp[0] == 'getMin':
         val = int(temp[1])
+        # val = 4
         while heap and heap[0] < val:
             heapq.heappop(heap)
             res.append('removeMin')
