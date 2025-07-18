@@ -1,4 +1,4 @@
-# July 15 2025
+# July 17 2025
 # https://leetcode.com/problems/minimum-moves-to-reach-target-score/description/
 class Solution:
     def minMoves(self, target: int, maxDoubles: int) -> int:
