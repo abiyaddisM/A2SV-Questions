@@ -2,10 +2,8 @@ from collections import Counter,deque, defaultdict
 import heapq
 import math
 import sys
-
 def INT():
     return int(sys.stdin.readline())
-
 def IA():
     return list(map(int, sys.stdin.readline().split()))
 def SA():
