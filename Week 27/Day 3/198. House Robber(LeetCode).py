@@ -13,4 +13,4 @@ class Solution:
             dic[i] = max(t1,t2)
             return max(t1, t2)
 
-        return helper(0)    
+        return helper(0)
