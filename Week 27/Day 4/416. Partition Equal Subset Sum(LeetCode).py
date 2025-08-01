@@ -2,16 +2,17 @@
 # https://leetcode.com/problems/partition-equal-subset-sum/description/
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
-        total = sum(nums)
-        if total % 2 != 0:
+        if sum(nums) % 2 != 0:
             return False
-        target = total // 2
-
-        dp = [False] * (target + 1)
-        dp[0] = True
-
-        for num in nums:
-            for t in range(target, num - 1, -1):
-                dp[t] = dp[t] or dp[t - num]
-
-        return dp[target]
+        target = sum(nums) // 2
+        dic = {}
+        def helper(i, total):
+            if total == target:
+                return True
+            if i >= len(nums):
+                return False
+            if (i, total) in dic:
+                return dic[(i, total)]
+            dic[(i, total)] = helper(i + 1, total) or helper(i + 1, total + nums[i])
+            return dic[(i, total)]
+        return helper(0, 0)
