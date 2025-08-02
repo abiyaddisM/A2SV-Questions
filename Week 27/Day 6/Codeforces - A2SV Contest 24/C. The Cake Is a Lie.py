@@ -21,18 +21,5 @@ def YesNo(state):
 
 t = INT()
 for _ in range(t):
-    nums = IA()
-
-
-def main():
-    pass
-
-
-if __name__ == '__main__':
-    sys.setrecursionlimit(200000)
-    threading.stack_size(2 * 1024 * 1024)
-
-    main_thread = threading.Thread(target=main)
-    main_thread.start()
-    main_thread.join()
-
+    n, m, k = IA()
+    YesNo((n - 1) + ((m - 1) * n) == k)

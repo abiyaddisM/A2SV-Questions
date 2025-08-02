@@ -18,15 +18,24 @@ def YesNo(state):
     else:
         print('NO')
 
-
-t = INT()
-for _ in range(t):
-    nums = IA()
-
-
 def main():
-    pass
+    size = INT()
+    nums = IA()
+    memo = [[-1] * (size + 2) for _ in range(size + 2)]
 
+    def helper(i, pre):
+        if i >= size:
+            return 0
+        if memo[i][pre] != -1:
+            return memo[i][pre]
+        include = 0
+        if pre == -1 or (nums[i] > nums[pre] and math.gcd(nums[i] , nums[pre]) > 1):
+            include = 1 + helper(i + 1, i)
+        exclude = helper(i + 1, pre)
+        memo[i][pre] = max(include, exclude)
+        return memo[i][pre]
+
+    print(helper(0, -1))
 
 if __name__ == '__main__':
     sys.setrecursionlimit(200000)

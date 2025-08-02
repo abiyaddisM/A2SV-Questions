@@ -20,19 +20,25 @@ def YesNo(state):
 
 
 t = INT()
-for _ in range(t):
-    nums = IA()
-
-
-def main():
-    pass
-
-
-if __name__ == '__main__':
-    sys.setrecursionlimit(200000)
-    threading.stack_size(2 * 1024 * 1024)
-
-    main_thread = threading.Thread(target=main)
-    main_thread.start()
-    main_thread.join()
+nums = IA()
+temp = []
+res = 0
+for i in range(t):
+    if nums[i] <= 0:
+        res += abs(nums[i] + 1)
+        temp.append(-1)
+        continue
+    res += nums[i] - 1
+    temp.append(1)
+neg = 0
+for n in nums:
+    if n < 0:
+        neg += 1
+if neg % 2 != 0:
+    if nums.count(0) == 0:
+        print(res + 2)
+    else:
+        print(res)
+else:
+    print(res)
 

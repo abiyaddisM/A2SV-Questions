@@ -19,14 +19,27 @@ def YesNo(state):
         print('NO')
 
 
-t = INT()
-for _ in range(t):
-    nums = IA()
-
 
 def main():
-    pass
+    t = INT()
+    nums = IA()
+    temp = [0] * max(nums)
+    for n in nums:
+        temp[n - 1] += 1
+    for i in range(len(temp)):
+        temp[i] *= (i + 1)
+    dic = {}
+    def helper(i):
+        if i >= len(temp):
+            return 0
+        if i in dic:
+            return dic[i]
+        include = temp[i] + helper(i + 2)
+        exclude = helper(i + 1)
+        dic[i] = max(include, exclude)
+        return dic[i] 
 
+    print(helper(0))
 
 if __name__ == '__main__':
     sys.setrecursionlimit(200000)
@@ -35,4 +48,5 @@ if __name__ == '__main__':
     main_thread = threading.Thread(target=main)
     main_thread.start()
     main_thread.join()
+
 
