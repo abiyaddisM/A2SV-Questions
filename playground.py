@@ -19,6 +19,7 @@ def YesNo(state):
         print('NO')
 
 
+
 t = INT()
 for _ in range(t):
     nums = IA()
