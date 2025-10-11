@@ -24,7 +24,7 @@ class Solution:
                 res[0] = 1
             for i in range(len(needle), len(haystack)):
                 old = (convert(haystack[i - len(needle)]) * CB) % MOD
-                resh = (((resh - old) * base) + convert(haystack[i])) % MOD
+                resh = ((resh - old) * base + convert(haystack[i]) ) % MOD
                 if resh == HASH:
                     res[i - len(needle) + 1] = 1
             return res
